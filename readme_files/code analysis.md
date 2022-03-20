@@ -72,17 +72,17 @@ En relación al análisis realizado por la herramienta, se muestra que el códig
 
 ##### Automate Tests
 El análisis realizado con la herramienta se complementa con el estudio previo realizado, ya que nos muestra que a pesar de que el programa cuenta con pruebas unitarias, estas tienen un bajo porcentaje de cobertura, por esta razón se necesita complementarlas para mejorar la calidad del código del programa.
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_5.png)
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_5_1.png)
+
+##### Separate Concerns in Modules
 ![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_3.png)
 ![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_3_1.png)
 
-##### Separate Concerns in Modules
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_4.png)
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_4_1.png)
-
 ##### Keep Architecture Components Balanced
 
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_5.png)
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_5_1.png)
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_4.png)
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_4_1.png)
 
 
 
