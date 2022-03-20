@@ -22,7 +22,10 @@ Better Code Hub es un servicio de análisis de código fuente,gratuito para cód
 #### Análisis Realizado
 Se realizó el análisis del código del proyecto, una vez realizado este análisis se evidencia que se cumplen 5 de los 10 principios evaluados, a continuación se detallan los resultados de este análisis.
 
-##### Resultados Satisfactorios
+[![BCH compliance](https://bettercodehub.com/edge/badge/alexviatela/GildedRose-Refactoring-Kata?branch=main)](https://bettercodehub.com/)
+
+#### Resultados Satisfactorios
+
 
 
 
