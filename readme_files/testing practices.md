@@ -2,6 +2,12 @@
 
 ![N](https://escuelaing.s3.amazonaws.com/staging/images/logo-ecijg.width-380.png)
 
+# Contenido
+- [CSDT-2022-1](https://github.com/alexviatela/GildedRose-Refactoring-Kata/blob/main/CSDT-2022-1.md)
+  * [Gilded Rose](#gilded-rose)
+    + [Prácticas de Testing](#prácticas-de-testing)
+    + [Autor](#autor)
+
 
 ### Prácticas de Testing 
 ------------

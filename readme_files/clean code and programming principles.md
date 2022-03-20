@@ -2,6 +2,15 @@
 
 ![N](https://escuelaing.s3.amazonaws.com/staging/images/logo-ecijg.width-380.png)
 
+# Contenido
+- [CSDT-2022-1](https://github.com/alexviatela/GildedRose-Refactoring-Kata/blob/main/CSDT-2022-1.md)
+  * [Gilded Rose](#gilded-rose)
+    + [Clean Code](#clean-code)
+    + [Principios de Programación](#principios-de-programación)
+	+ [Prácticas XP](#prácticas-xp)
+    + [Autor](#autor)
+
+
 ### Clean Code
 ------------
 Para el proyecto se ha encontrado algunas implementaciones de caracteriaticas de Clean Code.
