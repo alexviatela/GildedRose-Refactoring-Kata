@@ -15,9 +15,9 @@
 ------------
 Para el proyecto se ha encontrado algunas implementaciones de caracteriaticas de Clean Code.
 
-![](https://github.com/alexviatela/GildedRose-Refactoring-Kata/blob/develop_code_refactoring/images/CleanCodeOK.png?raw=true)
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/CleanCodeOK.png)
 
-![](https://github.com/alexviatela/GildedRose-Refactoring-Kata/blob/develop_code_refactoring/images/CleanCodeFail.png?raw=true)
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/CleanCodeFail.png)
 
 ### Principios de Programación
 ------------
