@@ -13,8 +13,9 @@ class GildedRoseTest(unittest.TestCase):
         
         
     def test_items_decrease_by_one(self):
-        self.items.append(Item("Item Test", 10, 20))
-        gilded_rose.update_quality(self.items)
+        items = [Item("foo", 0, 0)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
         expected = {'sell_in': 9, 'quality': 19}
         item = self.items[0]
         self.assertEqual(item.quality, expected['quality'])
