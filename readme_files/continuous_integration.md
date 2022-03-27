@@ -63,10 +63,12 @@ jobs:
 
 #### Ejecución Inicial del proceso.
 Se realiza el commit inicial para la ejecuión del workflow, el cual nos muestra una novedad durante el proceso de pruebas unitarias
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/continuous_integration_1.png)
 ![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/continuous_integration_2.png)
 
 Se realiza la corrección de la prueba unitaria correspondiente, posteriormente el flujo vuelve a enviarse y genera resultados satisfactorios.
 ![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/continuous_integration_3.png)
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/continuous_integration_4.png)
 
 ### Análisis de Seguridad
 Para el Análisis de Seguridad del proyecto
