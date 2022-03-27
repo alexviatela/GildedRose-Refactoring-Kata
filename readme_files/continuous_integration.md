@@ -18,7 +18,7 @@ Para el proceso de integración continua se realiza la configuración del workfl
 
 #### Configuración YML para proceso.
 Se realiza la configuración inicial para la ejecución del workflow.
-'''
+```
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
@@ -59,7 +59,7 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-'''
+```
 
 #### Ejecución Inicial del proceso.
 Se realiza el commit inicial para la ejecuión del workflow, el cual nos muestra una novedad durante el proceso de pruebas unitarias
