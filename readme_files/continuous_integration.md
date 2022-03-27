@@ -5,84 +5,71 @@
 # Contenido
 - [CSDT-2022-1](https://github.com/alexviatela/GildedRose-Refactoring-Kata/blob/main/CSDT-2022-1.md)
   * [Gilded Rose](#gilded-rose)
-    + [Análisis Preliminar](#análisis-preliminar)
-		+ [Herramienta de Análisis Utilizada](#herramienta-de-análisis-utilizada)
-		+ [Resultados Satisfactorios](#resultados-satisfactorios)
-		+ [Resultados Insatisfactorios](#resultados-insatisfactorios)
+    + [Integración Continua](#Integración-Continua)
     + [Autor](#autor)
 
 
-### Análisis Preliminar
-Se ha realizado un análisis preliminar al código del proyecto haciendo uso de dos herramientas de análisis estático de código, esto nos permitirá identificar oportunamente las falencias en nuestri código para así corregirlas fácilmente.
+## Integración Continua
+Se han establecido dos workflow de github para la implementación de integración continua y un análisis de seguridad para el proyecto.
 
 
-### Herramienta de Análisis Utilizada
+### Proceso de Integración Continua
+Para el proceso de integración continua se realiza la configuración del workflow Python Package, este nos permite ejecutar el proceso de integración en distintas versiones de python, las versiones utilizadas para este proceso son 3.8, 3.9, 3.10.
 
-#### Better Code Hub
-Better Code Hub es un servicio de análisis de código fuente,gratuito para código abierto, basado en la web que verifica el cumplimiento de una base de código con las diez pautas presentadas en Creación de software mantenible. 
+#### Configuración YML para proceso.
+Se realiza la configuración inicial para la ejecución del workflow.
+'''
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-#### Análisis Realizado
-Se realizó el análisis del código del proyecto, una vez realizado este análisis se evidencia que se cumplen 5 de los 10 principios evaluados, a continuación se detallan los resultados de este análisis.
+name: Python package
 
-[![BCH compliance](https://bettercodehub.com/edge/badge/alexviatela/GildedRose-Refactoring-Kata?branch=main)](https://bettercodehub.com/)
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-#### Resultados Satisfactorios
+jobs:
+  build:
 
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
 
-#### Write Code Once
-En relación al análisis realizado por la herramienta, nos muestra que el código no presenta duplicidad.
-Este análisis de complementa con el análisis previo realizado en la revisión de Code Smells, donde se comentaba que el código no presentaba duplicidad.
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_ok_1.png)
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with pytest
+      run: |
+        pytest
+'''
 
-#### Keep Unit Interfaces Small
-En relación al análisis realizado por la herramienta, se muestra que se cumple el principio de mantenerlo sencillo y simple, esto permite que el código sea entendible, para un futuro refactoring no sería dificil analizar el funcionamiento correcto del código.
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_ok_2.png)
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_ok_2_1.png)
+#### Ejecución Inicial del proceso.
+Se realiza el commit inicial para la ejecuión del workflow, el cual nos muestra una novedad durante el proceso de pruebas unitarias
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/continuous_integration_2.png)
 
-#### Couple Architecture Components Loosely
-En relación al análisis realizado por la herramienta, se evidencia que hay bajo acoplamiento entre los componentes del código esto facilita el mantenimiento de los componentes de forma aislada.
-En comparación con el análisis previo, se había informado que este principio no se cumplia porque se implementaba el código en un solo método.
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_ok_3.png)
+Se realiza la corrección de la prueba unitaria correspondiente, posteriormente el flujo vuelve a enviarse y genera resultados satisfactorios.
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/continuous_integration_3.png)
 
-
-#### Keep Your Codebase Small
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_ok_4.png)
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_ok_4_1.png)
-
-
-#### Write Clean Code
-En relación al análisis realizado por la herramienta, nos dice la mayoria del codigo no cuenta con codel smells.
-Sin embargo nosotros encontramos varios code smells en la primera revisión.
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_ok_5.png)
-
-
-#### Resultados Insatisfactorios
-
-
-#### Write Short Units of Code
-En relación al análisis realizado por la herramienta, se evidencia que el código no está estructurado en pequeños fragmentos.
-Este análisis se complementa con el estudio previo realizado en Clean Code.
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_1.png)
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_1_1.png)
-
-#### Write Simple Units of Code
-En relación al análisis realizado por la herramienta, se muestra que el código tiene múltiples puntos de bifurcación (if, for, while, etc.) lo cuál afecta la complejidad para la modificación y prueba de los distintos métodos en el programa.
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_2.png)
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_2_1.png)
-
-#### Automate Tests
-El análisis realizado con la herramienta se complementa con el estudio previo realizado, ya que nos muestra que a pesar de que el programa cuenta con pruebas unitarias, estas tienen un bajo porcentaje de cobertura, por esta razón se necesita complementarlas para mejorar la calidad del código del programa.
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_5.png)
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_5_1.png)
-
-#### Separate Concerns in Modules
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_3.png)
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_3_1.png)
-
-#### Keep Architecture Components Balanced
-
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_4.png)
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/bettercodehub_fail_4_1.png)
+### Análisis de Seguridad
+Para el Análisis de Seguridad del proyecto
 
 
 
