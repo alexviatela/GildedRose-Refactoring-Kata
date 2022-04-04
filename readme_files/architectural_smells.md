@@ -173,10 +173,10 @@ class Item:
 
 ### Referencias
 
-https://www.c-sharpcorner.com/article/architecture-smells-detection-and-refactoring/
-http://www.cs.rug.nl/search/uploads/ArchitectureSmells/AS-MSC-01.pdf
-https://www.tusharma.in/smells/ARCH.html
-https://sourcemaking.com/antipatterns/software-architecture-antipatterns
+* https://www.c-sharpcorner.com/article/architecture-smells-detection-and-refactoring/
+* http://www.cs.rug.nl/search/uploads/ArchitectureSmells/AS-MSC-01.pdf
+* https://www.tusharma.in/smells/ARCH.html
+* https://sourcemaking.com/antipatterns/software-architecture-antipatterns
 
 
 ### Autor :man_beard:
