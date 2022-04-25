@@ -23,6 +23,7 @@ ATAM(Architecture Trade-Off Analysis Method) es un método de evaluación de arq
 
 ### ¿Qué es QAW?
 QAW(Quality Attribute Workshops) es un taller donde se integran los diferentes stakeholders para identificar los atributos de calidad que serán drivers del diseño de arquitectura del producto.
+
 QAW facilita la resolución temprana de conflictos, obtiene consensos entre los stakeholders y ayuda a mejorar los requerimientos a todos los niveles.
 
 
