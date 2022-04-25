@@ -41,6 +41,8 @@ Se han planteado los siguientes escenarios para QAW's:
 1) Actualización masiva de inventario:
 ![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/Scenario_1_QAW.png)
 
+
+2) Actualización en reglas de calidad y caducidad de productos:
 ![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/Scenario_2_QAW.png)
 
 
