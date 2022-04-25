@@ -7,8 +7,7 @@
   * [Gilded Rose](#gilded-rose)
     + [Architectural Debt](#Architectural-Debt)
 		+ [¿Qué es ATAM y cuál es su objetivo?](#¿Qué-es-ATAM-y-cuál-es-su-objetivo?)
-		+ [Architectural Smells en el Proyecto](#Architectural-Smells-en-el-Proyecto)
-		+ [Referencias](#Referencias)
+		+ [¿Qué es QAW?](#¿Qué-es-QAW?)
     + [Autor](#autor)
 
 
@@ -22,6 +21,10 @@ ATAM(Architecture Trade-Off Analysis Method) es un método de evaluación de arq
 * Ayuda a predecir como un atributo de interés puede ser afectado por decisiones arquitectónicas.
 * Los atributos de calidad de interés son aclarados mediante el análisis de los escenarios que son definidos por los stakeholders
 
+### ¿Qué es QAW?
+QAW(Quality Attribute Workshops) es un taller donde se integran los diferentes stakeholders para identificar los atributos de calidad que serán drivers del diseño de arquitectura del producto.
+QAW facilita la resolución temprana de conflictos, obtiene consensos entre los stakeholders y ayuda a mejorar los requerimientos a todos los niveles.
+
 
 ### Aplicación de ATAM en el Proyecto
 
@@ -29,7 +32,9 @@ ATAM(Architecture Trade-Off Analysis Method) es un método de evaluación de arq
 #### Presentación de la arquitectura
 A continuación se presenta una arquitectura preliminar para el despliegue de la aplicación:
 
-![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/develop_code_refactoring/images/ModeloArquitectura.png)
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/ModeloArquitectura.png)
+
+
 
 
 
