@@ -35,6 +35,13 @@ A continuación se presenta una arquitectura preliminar para el despliegue de la
 
 ![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/ModeloArquitectura.png)
 
+#### Escenarios QAW's
+Se han planteado los siguientes escenarios para QAW's:
+
+1)
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/Scenario_1_QAW.png)
+
+![](https://raw.githubusercontent.com/alexviatela/GildedRose-Refactoring-Kata/main/images/Scenario_2_QAW.png)
 
 
 
